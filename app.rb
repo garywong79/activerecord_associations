@@ -1,4 +1,5 @@
 require_relative 'app/models/teacher'
+require_relative 'app/models/student'
 require_relative 'db/config'
 
 # p Teacher.column_names
@@ -11,6 +12,7 @@ require_relative 'db/config'
 # 	a  = "failed"
 # 	p a
 # end
+# p Teacher.all
 
 # Teacher.all.each do |teacher|
 # 	p teacher
@@ -21,3 +23,16 @@ require_relative 'db/config'
 # teacher = Teacher.find_by(name: 'Gary')
 # teacher.destroy
 # p Teacher.last
+
+# p Student.column_names
+
+# p Student.count
+#  p Teacher.count
+
+ #find all student with teacher id = 1
+
+# p Teacher.joins(:students).where(:name =>"Ms. Frances Mertz")
+
+# Teacher.joins(:students).where(:name =>"Raymond Predovic")
+
+p Student.find_by name: "Raymond Predovic"
