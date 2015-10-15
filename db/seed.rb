@@ -1,14 +1,21 @@
 require_relative '../app/models/teacher'
 require_relative '../app/models/student'
+require_relative '../app/models/person'
 
 require 'faker'
 
+# g = ["male","female"]
+
 # 10.times do 
-# 	Teacher.create(:name => Faker::Name.name,
-# 									:email_address => Faker::Internet.email,
-# 									:phone_number => Faker::PhoneNumber.phone_number
+# 	Teacher.create(	:first_name => Faker::Name.name,
+# 									:last_name => Faker::Name.name,
+# 									:gender => "male",
+# 									:birthday => Faker::Date.between(50.years.ago, 21.years.ago),
+# 									:email => Faker::Internet.email,
+# 									:phone=> Faker::PhoneNumber.phone_number
 # 									)
 # 	end
+
 
 
 

@@ -1,6 +1,7 @@
+require_relative 'app/models/person'
 require_relative 'app/models/teacher'
 require_relative 'app/models/student'
-require_relative 'app/models/teacherstudent'
+require_relative 'app/models/teacher_student'
 require_relative 'db/config'
 
 # @teacher1 = Teacher.new(name: 'Andy', email_address:'gar@ruby.com', phone_number: '1-302-888-7890')
@@ -46,13 +47,13 @@ require_relative 'db/config'
 # 	puts "#{teacher.name}"
 # end
 
-# Find all the students under teacher id 2
-# teacher = Teacher.find(2)
-# puts "teacher name: #{teacher.name}\nTeacher ID: #{teacher.id}"
-# puts "#{teacher.name} students are:"
-# teacher.students.find_each do |student|
-# 	puts "#{student.name}"
-# end
+#Find all the students under teacher id 2
+teacher = Teacher.find(2)
+puts "teacher name: #{teacher.first_name}\nTeacher ID: #{teacher.id}"
+puts "#{teacher.first_name} students are:"
+teacher.students.find_each do |student|
+	puts "#{student.first_name} #{student.last_name}"
+end
 
 
 
